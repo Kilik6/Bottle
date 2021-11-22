@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView bottle;
-    private Random random = new Random();
+    private final Random random = new Random();
     private int lastDir;
     private boolean spinning;
 
@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void spinBottle(View v) {
         if (!spinning) {
-            int newDir = random.nextInt(1800);
-            float pivotX = bottle.getWidth() / 2;
-            float pivotY = bottle.getHeight() / 2;
+            int newDir = random.nextInt(3600);
+            float pivotX = (float) (bottle.getWidth() / 2.0);
+            float pivotY = (float) (bottle.getHeight() / 2.0);
 
             Animation rotate = new RotateAnimation(lastDir, newDir, pivotX, pivotY);
             rotate.setDuration(2500);
