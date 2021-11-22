@@ -13,6 +13,7 @@
         android:src="@drawable/bottle"
         android:layout_centerInParent="true"
         android:onClick="spinBottle"
-        android:contentDescription="@string/desc"/>
+        android:contentDescription="@string/desc"
+        tools:ignore="UsingOnClickInXml" />
 
 </RelativeLayout>
